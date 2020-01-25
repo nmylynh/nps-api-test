@@ -12,8 +12,8 @@ server.get('/', (req, res) => {
   });  
 
 
-server.use('/api/auth', auth);
-server.use('/api/users', users);
-server.use('/api/nps', nps);
+server.use('/auth', auth);
+server.use('/users', users);
+server.use('/nps', nps);
 
 module.exports = server;

@@ -1,7 +1,6 @@
 exports.seed = function(knex, Promise) {
   const nps = [
     {
-      id: 1,
       user_id: 3,
       name: "Daydreamers",
       description: "Daydreamers is an app that adds a screen saver and a song to your phone when you're in daydreaming mode",
@@ -12,7 +11,6 @@ exports.seed = function(knex, Promise) {
 
     },
     {
-      id: 2,
       user_id: 3,
       name: "Daydreamers1",
       description: "Daydreamers is an app that adds a screen saver and a song to your phone when you're in daydreaming mode1",
@@ -23,7 +21,6 @@ exports.seed = function(knex, Promise) {
 
     },
     {
-      id: 3,
       user_id: 3,
       name: "Daydreamers3",
       description: "Daydreamers is an app that adds a screen saver and a song to your phone when you're in daydreaming mode3",

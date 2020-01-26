@@ -17,10 +17,9 @@ function findById(id) {
     .first()
 }
 
-async function add(nps) {
-    const [id] = await db('nps').insert(nps);
-
-    return findById(id);
+function add(nps) {
+    return db('nps')
+        .insert(nps, '*')
 }
 
 function update(id, changes) {

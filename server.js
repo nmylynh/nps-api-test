@@ -1,9 +1,9 @@
 const express = require('express');
 const server = express();
-const configureMiddleware = require('./api/middleware/config-middleware');
-const auth = require('./api/routers/auth-router');
-const users = require('./api/routers/users-router');
-const nps = require('./api/routers/nps-router');
+const configureMiddleware = require('./config-middleware');
+const auth = require('./api/auth/auth-router');
+const users = require('./api/users/users-router');
+const nps = require('./api/nps/nps-router');
 
 configureMiddleware(server);
 

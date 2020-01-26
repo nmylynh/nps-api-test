@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Nps = require('./nps-model')
+const Nps = require('./nps-model');
 
 
 module.exports = router;

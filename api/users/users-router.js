@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Users = require('./users-model.js');
 const bcrypt = require('bcryptjs');
-const { validateUserBody, validateUserId } = require('./users-middleware')
+const { validateUserBody, validateUserId } = require('./users-mw')
 
 module.exports = router;
 

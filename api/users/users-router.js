@@ -26,7 +26,7 @@ async function get(req, res) {
 async function getId(req, res) {
   try {
     const { id } = req.params;
-    const user = await Users.getId(id);
+    const user = await Users.get(id);
 
     res.status(200).json(user);
   } catch (err) {

@@ -7,6 +7,7 @@ module.exports = router;
 
 router.get('/', get)
 router.get('/:id', getId)
+router.get('/:id/nps', getNps)
 router.delete('/:id', validateUserId, remove)
 router.put('/:id', validateUserId, update)
 
@@ -32,6 +33,17 @@ async function getId(req, res) {
     res.status(500).json({ success: false, err, msg: 'could not find user by id' })
   }
 }
+
+async function getNps(req, res) {
+  try {
+    const { id } = req.params;
+    const userNps = await Users.getUserNps(id);
+
+    res.status(200).json(userNps);
+  } catch (err) {
+    res.status(500).json({ success: false, err, msg: 'could not find user nps data' });
+  }
+};
 
 
 async function update(req, res) {
